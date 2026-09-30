@@ -24,12 +24,12 @@
   <br/>
 
   <img
-    src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&color=00F0FF&style=for-the-badge&label=PROFILE+VIEWS"
+    src="https://komarev.com/ghpvc/?username=Ritik-62&color=00F0FF&style=for-the-badge&label=PROFILE+VIEWS"
     alt="Profile Views"
   />
 
   <img
-    src="https://img.shields.io/github/followers/YOUR_GITHUB_USERNAME?style=for-the-badge&color=00F0FF&label=FOLLOWERS"
+    src="https://img.shields.io/github/followers/Ritik-62?style=for-the-badge&color=00F0FF&label=FOLLOWERS"
     alt="GitHub Followers"
   />
 
