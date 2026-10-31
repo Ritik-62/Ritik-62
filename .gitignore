@@ -1,0 +1,48 @@
+# Private & sensitive personal files (MUST NEVER BE COMMITTED)
+Resume.pdf
+ritik-photo.png
+source-photo.png
+*.pdf
+
+# Temporary & test outputs
+test_*.png
+test_*.svg
+ritik-prepped.png
+ref/
+ref_*
+preview.html
+
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.venv/
+venv/
+ENV/
+
+# System & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.env

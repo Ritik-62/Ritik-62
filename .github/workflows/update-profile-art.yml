@@ -1,0 +1,46 @@
+name: Update profile art
+
+# Refreshes the contribution heatmap + stats dashboard daily from real GitHub data.
+# Runs daily on schedule, on manual trigger, and on pushes to main.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # ~06:17 UTC every day
+  workflow_dispatch: {}
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Scrape authentic contribution data (public endpoint)
+        env:
+          GH_PROFILE_USER: "Ritik-62"
+        run: python scripts/fetch_contributions.py
+
+      - name: Render animated contribution heatmap SVG
+        run: python scripts/generate_heatmap_svg.py Ritik-62 assets/contrib-heatmap.svg
+
+      - name: Render activity and statistics dashboard SVG
+        run: python scripts/render_stats_svg.py data/contributions.json assets/stats.svg
+
+      - name: Commit updated art
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: refresh contribution graph and stats [skip ci]"
+          file_pattern: "data/contributions.json assets/contrib-heatmap.svg assets/stats.svg"
