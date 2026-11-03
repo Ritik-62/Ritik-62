@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="480" viewBox="0 0 860 480" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+
+<style>
+  .flow-line { stroke: #30363d; stroke-width: 1.5; fill: none; }
+  .node-box { fill: #161b22; stroke: #30363d; stroke-width: 1.2; rx: 8px; }
+  .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+  .status-pulse { animation: blink 1.8s ease-in-out infinite alternate; }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; r: 3; } 50% { opacity: 1; r: 4.5; } }
+  @keyframes blink { 0% { opacity: 0.4; } 100% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .pulse-dot, .status-pulse { animation: none !important; }
+  }
+</style>
+
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#111722"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+</defs>
+
+<rect width="860" height="480" rx="10" fill="url(#bgGrad)"/>
+<rect x="0.5" y="0.5" width="859" height="479" rx="10" fill="none" stroke="#30363d" stroke-width="1"/>
+<line x1="0" y1="30" x2="860" y2="30" stroke="#30363d"/>
+<circle cx="20" cy="15.0" r="5" fill="#ff5f56"/>
+<circle cx="36" cy="15.0" r="5" fill="#ffbd2e"/>
+<circle cx="52" cy="15.0" r="5" fill="#39d353"/>
+<text x="430.0" y="19.0" fill="#7d8590" font-size="12" text-anchor="middle">ritik@github: ~$ ./my_journey.sh --timeline</text>
+
+
+<!-- Sub Bar -->
+<g transform="translate(24, 48)">
+  <circle cx="8" cy="8" r="4" fill="#39d353" class="status-pulse"/>
+  <text x="20" y="12" fill="#39d353" font-size="11" font-weight="700">CHRONOLOGICAL LEARNING TIMELINE</text>
+  <text x="290" y="12" fill="#7d8590" font-size="10.5">Foundations ──► Data ──► ML ──► RAG ──► Agentic AI</text>
+  <text x="812" y="12" fill="#22d3ee" font-size="10.5" text-anchor="end">5 MILESTONE STAGES</text>
+</g>
+
+
+<g transform="translate(24, 76)">
+  <rect width="812" height="68" rx="6" class="node-box"/>
+  <rect x="0" y="6" width="4" height="56" rx="2" fill="#22d3ee"/>
+  
+  <rect x="14" y="10" width="70" height="20" rx="4" fill="#0d1117" stroke="#22d3ee" stroke-width="0.8"/>
+  <text x="49" y="23.5" fill="#22d3ee" font-size="9.5" font-weight="700" text-anchor="middle">STAGE 01</text>
+  
+  <rect x="90" y="10" width="74" height="20" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+  <text x="127" y="23.5" fill="#7d8590" font-size="9" font-weight="600" text-anchor="middle">2024</text>
+  
+  <text x="176" y="24" fill="#e6edf3" font-size="12.5" font-weight="700">Core Computer Science &amp; Software Design</text>
+  
+  <text x="16" y="45" fill="#e6edf3" font-size="9.5">● <tspan fill="#7d8590">SOLID design principles, clean architecture &amp; design patterns · </tspan><tspan fill="#e6edf3">Algorithmic complexity, high-efficiency data modeling</tspan></text>
+  <text x="16" y="59" fill="#22d3ee" font-size="9.5">● <tspan fill="#e6edf3">Full-stack foundations: Next.js, TypeScript, Prisma ORM, SQLite</tspan></text>
+</g>
+
+<g transform="translate(24, 154)">
+  <rect width="812" height="68" rx="6" class="node-box"/>
+  <rect x="0" y="6" width="4" height="56" rx="2" fill="#58a6ff"/>
+  
+  <rect x="14" y="10" width="70" height="20" rx="4" fill="#0d1117" stroke="#58a6ff" stroke-width="0.8"/>
+  <text x="49" y="23.5" fill="#58a6ff" font-size="9.5" font-weight="700" text-anchor="middle">STAGE 02</text>
+  
+  <rect x="90" y="10" width="74" height="20" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+  <text x="127" y="23.5" fill="#7d8590" font-size="9" font-weight="600" text-anchor="middle">2024–25</text>
+  
+  <text x="176" y="24" fill="#e6edf3" font-size="12.5" font-weight="700">Data Science &amp; Statistical Analytics</text>
+  
+  <text x="16" y="45" fill="#e6edf3" font-size="9.5">● <tspan fill="#7d8590">Exploratory data analysis, feature engineering &amp; regression modeling · </tspan><tspan fill="#e6edf3">Analyzed 243,553 telecom records uncovering churn &amp; segmentation</tspan></text>
+  <text x="16" y="59" fill="#58a6ff" font-size="9.5">● <tspan fill="#e6edf3">Oracle Cloud Infrastructure 2025 Certified Data Science Professional</tspan></text>
+</g>
+
+<g transform="translate(24, 232)">
+  <rect width="812" height="68" rx="6" class="node-box"/>
+  <rect x="0" y="6" width="4" height="56" rx="2" fill="#bc8cff"/>
+  
+  <rect x="14" y="10" width="70" height="20" rx="4" fill="#0d1117" stroke="#bc8cff" stroke-width="0.8"/>
+  <text x="49" y="23.5" fill="#bc8cff" font-size="9.5" font-weight="700" text-anchor="middle">STAGE 03</text>
+  
+  <rect x="90" y="10" width="74" height="20" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+  <text x="127" y="23.5" fill="#7d8590" font-size="9" font-weight="600" text-anchor="middle">2025</text>
+  
+  <text x="176" y="24" fill="#e6edf3" font-size="12.5" font-weight="700">Machine Learning &amp; Predictive Modeling</text>
+  
+  <text x="16" y="45" fill="#e6edf3" font-size="9.5">● <tspan fill="#7d8590">XGBoost and regularized Logistic classification benchmark pipelines · </tspan><tspan fill="#e6edf3">Leakage prevention protocol: chronological calendar partitions (t &lt; D)</tspan></text>
+  <text x="16" y="59" fill="#bc8cff" font-size="9.5">● <tspan fill="#e6edf3">Platt calibrator fitted on val split; Brier 0.1245 on held-out test split (26 tests)</tspan></text>
+</g>
+
+<g transform="translate(24, 310)">
+  <rect width="812" height="68" rx="6" class="node-box"/>
+  <rect x="0" y="6" width="4" height="56" rx="2" fill="#ffa657"/>
+  
+  <rect x="14" y="10" width="70" height="20" rx="4" fill="#0d1117" stroke="#ffa657" stroke-width="0.8"/>
+  <text x="49" y="23.5" fill="#ffa657" font-size="9.5" font-weight="700" text-anchor="middle">STAGE 04</text>
+  
+  <rect x="90" y="10" width="74" height="20" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+  <text x="127" y="23.5" fill="#7d8590" font-size="9" font-weight="600" text-anchor="middle">2025–26</text>
+  
+  <text x="176" y="24" fill="#e6edf3" font-size="12.5" font-weight="700">Retrieval-Augmented Generation (RAG)</text>
+  
+  <text x="16" y="45" fill="#e6edf3" font-size="9.5">● <tspan fill="#7d8590">Scholarly search retrieval pipelines with offline sample fallback · </tspan><tspan fill="#e6edf3">Schema normalization &amp; identifier hash deduplication algorithms</tspan></text>
+  <text x="16" y="59" fill="#ffa657" font-size="9.5">● <tspan fill="#e6edf3">Citation-grounded Markdown research reporting with [P1], [P2] labels (ARIA)</tspan></text>
+</g>
+
+<g transform="translate(24, 388)">
+  <rect width="812" height="68" rx="6" class="node-box"/>
+  <rect x="0" y="6" width="4" height="56" rx="2" fill="#39d353"/>
+  
+  <rect x="14" y="10" width="70" height="20" rx="4" fill="#0d1117" stroke="#39d353" stroke-width="0.8"/>
+  <text x="49" y="23.5" fill="#39d353" font-size="9.5" font-weight="700" text-anchor="middle">STAGE 05</text>
+  
+  <rect x="90" y="10" width="74" height="20" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+  <text x="127" y="23.5" fill="#7d8590" font-size="9" font-weight="600" text-anchor="middle">CURRENT</text>
+  
+  <text x="176" y="24" fill="#e6edf3" font-size="12.5" font-weight="700">Agentic AI &amp; Autonomous Workflows</text>
+  
+  <text x="16" y="45" fill="#e6edf3" font-size="9.5">● <tspan fill="#7d8590">LangGraph stateful DAG machines: multi-step reasoning &amp; decision loops · </tspan><tspan fill="#e6edf3">Coupling Random Forest regression with Groq LPU / Llama 3 agents</tspan></text>
+  <text x="16" y="59" fill="#39d353" font-size="9.5">● <tspan fill="#e6edf3">Designing production-quality AI applications solving real-world challenges</tspan></text>
+</g>
+
+
+</svg>
