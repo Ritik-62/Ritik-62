@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="420" viewBox="0 0 860 420" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+<style>
+  .flow-line { stroke: #30363d; stroke-width: 2; fill: none; }
+  .flow-pulse { stroke-dasharray: 8 16; stroke-dashoffset: 0; animation: flow 2.5s linear infinite; fill: none; }
+  .node-box { fill: #161b22; stroke: #30363d; stroke-width: 1.2; rx: 8px; transition: all 0.3s; }
+  .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+  .status-pulse { animation: blink 1.8s ease-in-out infinite alternate; }
+  @keyframes flow { to { stroke-dashoffset: -48; } }
+  @keyframes pulse { 0%, 100% { opacity: 0.3; r: 3; } 50% { opacity: 1; r: 4.5; } }
+  @keyframes blink { 0% { opacity: 0.4; } 100% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .flow-pulse, .pulse-dot, .status-pulse { animation: none !important; stroke-dashoffset: 0 !important; }
+  }
+</style>
+<defs>
+  <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#111722"/><stop offset="1" stop-color="#0d1117"/></linearGradient>
+  <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#39d353"/></linearGradient>
+  <linearGradient id="greenLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#39d353"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <linearGradient id="purpleLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bc8cff"/><stop offset="1" stop-color="#ffa657"/></linearGradient>
+  <linearGradient id="orangeLine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffa657"/><stop offset="1" stop-color="#39d353"/></linearGradient>
+</defs>
+<rect width="860" height="420" rx="10" fill="url(#bgGrad)"/>
+<rect x="0.5" y="0.5" width="859" height="419" rx="10" fill="none" stroke="#30363d" stroke-width="1"/>
+<line x1="0" y1="30" x2="860" y2="30" stroke="#30363d"/>
+<circle cx="20" cy="15.0" r="5" fill="#ff5f56"/>
+<circle cx="36" cy="15.0" r="5" fill="#ffbd2e"/>
+<circle cx="52" cy="15.0" r="5" fill="#27c93f"/>
+<text x="430.0" y="19.0" fill="#7d8590" font-size="12" text-anchor="middle">ritik@github: ~$ ./ai_research_lab.sh --workflow=overview</text>
+<g transform="translate(24, 48)">
+<circle cx="12" cy="12" r="4" fill="#39d353" class="status-pulse"/>
+<text x="24" y="16" fill="#39d353" font-size="11" font-weight="700">AI &amp; DATA SCIENCE WORKFLOW</text>
+<text x="226" y="16" fill="#7d8590" font-size="10.5">Data Ingest → ML Baselines → RAG → Agents → LLMs → Outputs</text>
+<text x="812" y="16" fill="#22d3ee" font-size="10.5" text-anchor="end">PIPELINE FLOW · 2026</text>
+</g>
+<line x1="270" y1="132.5" x2="307" y2="132.5" class="flow-line"/>
+<line x1="270" y1="132.5" x2="307" y2="132.5" class="flow-pulse" stroke="url(#cyanLine)" stroke-width="2.5"/>
+<circle cx="288.5" cy="132.5" r="3" fill="#22d3ee" class="pulse-dot"/>
+<line x1="553" y1="132.5" x2="590" y2="132.5" class="flow-line"/>
+<line x1="553" y1="132.5" x2="590" y2="132.5" class="flow-pulse" stroke="url(#greenLine)" stroke-width="2.5"/>
+<circle cx="571.5" cy="132.5" r="3" fill="#39d353" class="pulse-dot"/>
+<path d="M 713 185 C 713 212, 147 198, 147 225" class="flow-line"/>
+<path d="M 713 185 C 713 212, 147 198, 147 225" class="flow-pulse" stroke="#22d3ee" stroke-width="2"/>
+<line x1="270" y1="277.5" x2="307" y2="277.5" class="flow-line"/>
+<line x1="270" y1="277.5" x2="307" y2="277.5" class="flow-pulse" stroke="url(#purpleLine)" stroke-width="2.5"/>
+<circle cx="288.5" cy="277.5" r="3" fill="#bc8cff" class="pulse-dot"/>
+<line x1="553" y1="277.5" x2="590" y2="277.5" class="flow-line"/>
+<line x1="553" y1="277.5" x2="590" y2="277.5" class="flow-pulse" stroke="url(#orangeLine)" stroke-width="2.5"/>
+<circle cx="571.5" cy="277.5" r="3" fill="#39d353" class="pulse-dot"/>
+<g id="stage1">
+<rect x="24" y="80" width="246" height="105" class="node-box"/>
+<rect x="24" y="88" width="3.5" height="89" rx="1.5" fill="#22d3ee"/>
+<rect x="36" y="92" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="55" y="105" fill="#22d3ee" font-size="10" font-weight="700" text-anchor="middle">[01]</text>
+<text x="80" y="106" fill="#e6edf3" font-size="12.5" font-weight="700">DATA INGESTION</text>
+<text x="36" y="129" fill="#7d8590" font-size="10.5" font-weight="500">Raw Data &amp; Feature Pipelines</text>
+<line x1="36" y1="140" x2="258" y2="140" stroke="#21262d"/>
+<text x="36" y="157" fill="#22d3ee" font-size="10" font-weight="600">ETL · Normalization</text>
+<text x="36" y="173" fill="#8b949e" font-size="9.5">Deduplication · Vectors</text>
+</g>
+<g id="stage2">
+<rect x="307" y="80" width="246" height="105" class="node-box"/>
+<rect x="307" y="88" width="3.5" height="89" rx="1.5" fill="#39d353"/>
+<rect x="319" y="92" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="338" y="105" fill="#39d353" font-size="10" font-weight="700" text-anchor="middle">[02]</text>
+<text x="363" y="106" fill="#e6edf3" font-size="12.5" font-weight="700">MACHINE LEARNING</text>
+<text x="319" y="129" fill="#7d8590" font-size="10.5" font-weight="500">Statistical &amp; Boosted Baselines</text>
+<line x1="319" y1="140" x2="541" y2="140" stroke="#21262d"/>
+<text x="319" y="157" fill="#39d353" font-size="10" font-weight="600">XGBoost · Calibration</text>
+<text x="319" y="173" fill="#8b949e" font-size="9.5">Leakage-Safe · T-60 Protocol</text>
+</g>
+<g id="stage3">
+<rect x="590" y="80" width="246" height="105" class="node-box"/>
+<rect x="590" y="88" width="3.5" height="89" rx="1.5" fill="#22d3ee"/>
+<rect x="602" y="92" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="621" y="105" fill="#22d3ee" font-size="10" font-weight="700" text-anchor="middle">[03]</text>
+<text x="646" y="106" fill="#e6edf3" font-size="12.5" font-weight="700">RAG ARCHITECTURE</text>
+<text x="602" y="129" fill="#7d8590" font-size="10.5" font-weight="500">Multi-Query Context Retrieval</text>
+<line x1="602" y1="140" x2="824" y2="140" stroke="#21262d"/>
+<text x="602" y="157" fill="#22d3ee" font-size="10" font-weight="600">Semantic Search · RAG</text>
+<text x="602" y="173" fill="#8b949e" font-size="9.5">Filtering · Dense Embeddings</text>
+</g>
+<g id="stage4">
+<rect x="24" y="225" width="246" height="105" class="node-box"/>
+<rect x="24" y="233" width="3.5" height="89" rx="1.5" fill="#bc8cff"/>
+<rect x="36" y="237" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="55" y="250" fill="#bc8cff" font-size="10" font-weight="700" text-anchor="middle">[04]</text>
+<text x="80" y="251" fill="#e6edf3" font-size="12.5" font-weight="700">AI AGENTS</text>
+<text x="36" y="274" fill="#7d8590" font-size="10.5" font-weight="500">Autonomous State Machine Loops</text>
+<line x1="36" y1="285" x2="258" y2="285" stroke="#21262d"/>
+<text x="36" y="302" fill="#bc8cff" font-size="10" font-weight="600">LangGraph State Loops</text>
+<text x="36" y="318" fill="#8b949e" font-size="9.5">Decision Flows · Tool Calling</text>
+</g>
+<g id="stage5">
+<rect x="307" y="225" width="246" height="105" class="node-box"/>
+<rect x="307" y="233" width="3.5" height="89" rx="1.5" fill="#ffa657"/>
+<rect x="319" y="237" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="338" y="250" fill="#ffa657" font-size="10" font-weight="700" text-anchor="middle">[05]</text>
+<text x="363" y="251" fill="#e6edf3" font-size="12.5" font-weight="700">LLM APPLICATIONS</text>
+<text x="319" y="274" fill="#7d8590" font-size="10.5" font-weight="500">Prompt &amp; Synthesis Pipelines</text>
+<line x1="319" y1="285" x2="541" y2="285" stroke="#21262d"/>
+<text x="319" y="302" fill="#ffa657" font-size="10" font-weight="600">Llama 3 · Groq LPU · OpenAI</text>
+<text x="319" y="318" fill="#8b949e" font-size="9.5">Structured Outputs &amp; Guards</text>
+</g>
+<g id="stage6">
+<rect x="590" y="225" width="246" height="105" class="node-box"/>
+<rect x="590" y="233" width="3.5" height="89" rx="1.5" fill="#39d353"/>
+<rect x="602" y="237" width="38" height="18" rx="4" fill="#0d1117" stroke="#30363d" stroke-width="0.8"/>
+<text x="621" y="250" fill="#39d353" font-size="10" font-weight="700" text-anchor="middle">[06]</text>
+<text x="646" y="251" fill="#e6edf3" font-size="12.5" font-weight="700">SYSTEM OUTPUTS</text>
+<text x="602" y="274" fill="#7d8590" font-size="10.5" font-weight="500">Evidence-Grounded Deliverables</text>
+<line x1="602" y1="285" x2="824" y2="285" stroke="#21262d"/>
+<text x="602" y="302" fill="#39d353" font-size="10" font-weight="600">Verified Research Reports</text>
+<text x="602" y="318" fill="#8b949e" font-size="9.5">Tableau Dashboards · APIs</text>
+</g>
+<g id="telemetry-bar">
+<rect x="24" y="356" width="812" height="44" rx="6" fill="#111722" stroke="#30363d" stroke-width="1"/>
+<line x1="195" y1="363" x2="195" y2="393" stroke="#30363d"/>
+<line x1="645" y1="363" x2="645" y2="393" stroke="#30363d"/>
+<circle cx="42" cy="378" r="3.5" fill="#39d353" class="status-pulse"/>
+<text x="54" y="382" fill="#39d353" font-size="11" font-weight="700">AI WORKFLOW LAB</text>
+<text x="210" y="375" fill="#7d8590" font-size="9.5">RAG: <tspan fill="#22d3ee">Multi-Query</tspan> · ML: <tspan fill="#39d353">Platt Calib</tspan></text>
+<text x="210" y="388" fill="#7d8590" font-size="9.5">Agents: <tspan fill="#bc8cff">LangGraph</tspan> · LLMs: <tspan fill="#ffa657">Groq / Llama 3</tspan></text>
+<rect x="660" y="366" width="160" height="24" rx="4" fill="#0d1117" stroke="#238636" stroke-width="0.8"/>
+<circle cx="675" cy="378" r="3" fill="#39d353" class="status-pulse"/>
+<text x="686" y="382" fill="#39d353" font-size="10" font-weight="700">STATUS: VERIFIED</text>
+</g>
+</svg>

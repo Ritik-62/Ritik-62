@@ -39,8 +39,13 @@ jobs:
       - name: Render activity and statistics dashboard SVG
         run: python scripts/render_stats_svg.py data/contributions.json assets/stats.svg
 
+      - name: Refresh authentic Kaggle activity
+        env:
+          KAGGLE_USERNAME: "ritikraj8809"
+        run: python scripts/fetch_kaggle.py || true
+
       - name: Commit updated art
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: refresh contribution graph and stats [skip ci]"
-          file_pattern: "data/contributions.json assets/contrib-heatmap.svg assets/stats.svg"
+          commit_message: "chore: refresh contribution graph, stats and kaggle activity [skip ci]"
+          file_pattern: "data/contributions.json data/kaggle.json assets/contrib-heatmap.svg assets/stats.svg"
